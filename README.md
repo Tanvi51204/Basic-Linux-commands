@@ -4,10 +4,11 @@ Welcome to the **Intro to Linux/Bash Commands** session! This repository contain
 
 ## **Table of Contents**
 - [Getting Started with the Terminal](#getting-started-with-the-terminal)
+- [Basic Commands](#basic-commands)
 - [Basic Navigation Commands](#basic-navigation-commands)
 - [File and Directory Management](#file-and-directory-management)
 - [Viewing and Manipulating Files](#viewing-and-manipulating-files)
-- [System Information](#system-information)
+- [System and User Information](#system-and-user-information)
 - [Networking Basics](#networking-basics)
 - [Additional Resources](#additional-resources)
 
@@ -15,6 +16,19 @@ Welcome to the **Intro to Linux/Bash Commands** session! This repository contain
 
 ### **Getting Started with the Terminal**
 Whether you’re on **Linux**, **macOS**, or **Windows (with WSL)**, open the terminal to start using these commands!
+
+---
+### **Basic Commands**
+| Command                | Description                                        | Example                 |
+|------------------------|----------------------------------------------------|-------------------------|
+| `date`                 | Shows the current date and time                    | `date`                  |
+| `cal`                  | Displays the calender for the current month        | `cal`                   |
+| `groups`               | Lists the groups that the current user belongs     | `groups`                | 
+| `file`                 | Determines and shows the file                      | `file myfile.txt`       |
+| `man`                  | Opens the manual page for a specific command       | `man ls`                |
+| `which`                | Displays the full path of the command’s executable | `which python`          |
+| `whatis`               | Provides a brief description of a command          | `whatis grep`           |
+| `apropos`              | Searches for commands related to a specific keyword| `apropos network`       |
 
 ---
 
@@ -34,6 +48,9 @@ Whether you’re on **Linux**, **macOS**, or **Windows (with WSL)**, open the te
 | `touch <file_name>`      | Create a new, empty file                                | `touch myfile.txt`       |
 | `rm <file_name>`         | Remove (delete) a file                                  | `rm oldfile.txt`         |
 | `rmdir <directory_name>` | Remove an empty directory                               | `rmdir empty_folder`     |
+| `cp <source> <destination>` | Copies files or directories                          | ` cp myfile.txt backupfile.txt`  |
+| `mv <source> <destination>` | Moves or renames files.                               | `mv myfile.txt newfile.txt`     |
+| `rm <file_name>` | Deletes a file                                              | `rm myfile.txt`     |
 
 ---
 
@@ -43,20 +60,21 @@ Whether you’re on **Linux**, **macOS**, or **Windows (with WSL)**, open the te
 | `cat <file_name>`             | Display file contents                            | `cat myfile.txt`         |
 | `head <file_name>`            | Show the first 10 lines of a file                | `head myfile.txt`        |
 | `tail <file_name>`            | Show the last 10 lines of a file                 | `tail myfile.txt`        |
+| `wc <file_name>`            | Counts the number of lines, words and characters in a file | `wc myfile.txt`    |
 | `less <file_name>`            | View file content with scrolling (press `q` to exit) | `less myfile.txt`    |
 | `echo "<text>" > <file_name>` | Write text to a file                             | `echo "Hello" > hello.txt` |
 
 ---
 
-### **System Information**
+### **System and User Information**
 | Command         | Description                                    | Example       |
 |-----------------|------------------------------------------------|---------------|
 | `df -h`         | Show disk space usage in a human-readable format | `df -h`      |
+| `whoami`         | Shows the username of the current user  | `whoami`      |
 | `free -h`       | Display memory (RAM) usage                     | `free -h`     |
-| `top`           | View active processes and system resource usage (press `q` to exit) | `top` |
-| `history`       | List previously used commands                 | `history`     |
-| `clear`         | Clear the terminal screen                     | `clear`       |
-
+| `who`           | Lists all users currently logged in | `who` |
+| `uname -r`       | Shows the kernel version of the OS                 | `uname -r`     |
+| `top`         | Displays running system processes in real-time           |  `top`       |
 ---
 
 ### **Networking Basics**
@@ -70,21 +88,10 @@ Whether you’re on **Linux**, **macOS**, or **Windows (with WSL)**, open the te
 
 ---
 
-### **Helpful Commands for Help!**
-| Command                   | Description                                      | Example                   |
-|---------------------------|--------------------------------------------------|---------------------------|
-| `man <command>`           | Display the manual page for a command            | `man ls`                  |
-| `which <command>`         | Show the path to an executable command           | `which python`            |
-| `whatis <command>`        | Get a brief description of a command             | `whatis grep`             |
-| `apropos <keyword>`       | Find commands related to a keyword               | `apropos network`         |
-
----
-
 ### **Additional Resources**
 For more in-depth learning:
 - [The Linux Command Line by William Shotts](https://linuxcommand.org/tlcl.php)
-- [Linux Documentation Project](https://tldp.org/)
 
 ---
 
-Feel free to explore and experiment with these commands to build your Linux confidence. Happy coding, and may the terminal be with you!
+Feel free to explore and experiment with these commands to build your Linux confidence. Happy coding!
